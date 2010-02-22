@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>{% if page.title %}{{ page.title }}  :: {% endif %}{{ site.blog_title }}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" />
+  </head>
+  <body{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+    
+  <div id="header">
+    <div class="wrapper">
+      <div id="logo"><a href="/"><img src="/images/logo.png" alt="Take me home!" /></a></div>
+      <div id="menu_box">
+        <ul id="main_menu">
+          <li class="first"><a href="/">Home</a></li>
+          <li><a href="/">Projects</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div id="info_box"></div>
+  <div id="main_content">
+    <div class="wrapper">
+      <div id="content">{{ content }}</div>
+      <div id="sidebar">
+        Sidebar
+      </div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div id="bottom_gfx_banner"><div id="bottom_gfx" class="wrapper"></div></div>
+    <div id="footer">
+      <div id="footer_content" class="wrapper">
+        <div id="twitter_div" class="footer_extra_info">
+          <h3>Twitter</h3>
+          {% include twitter.html %}
+        </div>
+        <div id="lastfm_div" class="footer_extra_info">
+          <h3>Last.fm</h3>
+          {% include lastfm.html %}
+        </div>
+        <div id="flickr_div" class="footer_extra_info">
+          <h3>Flickr</h3>
+          {% include flickr.html %}
+        </div>
+        <div class="clr"></div>
+        <br />
+        <div id="copyright">
+          Copyright &copy; 2007 - 2008 27smiles. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.  <br /><a href="/feed.xml">Entries (RSS)</a>.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>   

@@ -1,0 +1,220 @@
+/*   
+Theme Name: Night Watcher
+Theme URI: http://27smiles.com
+Description: Nightish theme for 27smiles.
+Author: Richard Grundy.
+Author URI: http://27smiles.com
+Version: 1.0
+*/
+
+* {margin:0;padding:0;}
+
+body {
+	font-family: "MS Trebuchet", Verdana, Arial, sans-serif;
+	font-size: 75%;
+	text-align: center;
+	background: #4e2412;
+	color: #4f4f4f;
+}
+
+p {
+	line-height: 1.5; margin: 10px 0;
+}
+
+a {color: #3E97BB; text-decoration: none;}
+a:hover {color: #492212;}
+
+a img {border:0;}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left
+	}
+
+
+
+ul {margin-left: 2em;}
+
+h1,h2,h3,h4,h5 {margin-bottom: 10px;}
+
+.wrapper {
+	width: 940px;
+	margin: 0 auto;
+	text-align: left;
+}
+.clr{clear: both;}
+			
+#header {
+	background: url(/images/header.png) repeat-x top left;
+	height: 103px;
+}
+#logo {float: left;}
+#menu_box {float: right;}
+#main_menu {
+	list-style: none;
+}
+#main_menu li {
+	float: left; display: inline;
+	margin-right: 15px;
+	height: 101px;  padding-top:40px; padding-left: 15px; height: 50px;
+	background: url(/images/menu_div.png) no-repeat top left;
+}
+#main_menu li.first {margin-left: 0; padding-left:0; background: none;}
+
+#main_menu a {
+	font-size: 15px; text-decoration: none; color: #FFF;
+	display: block;
+	height: 50px; 
+}
+/* I don't get IE6? :( */
+* html #main_menu a {width: 20px;}
+#main_menu a:hover, #main_menu li.current_page_item a {color: #4b2313; background: url(/images/menu_arrow.png) no-repeat top center;}
+
+#info_box {background:url(/images/info_box.png) repeat-x; height: 7px;}
+
+#main_content {background: #f7f7f7; padding: 10px 0;}
+/* Stop IE6 putting a gap in, forgot why? it's IE6 I suppose. */
+* html #main_content {margin-top: -9px;}
+#main_content #content {float: left; width: 670px;}
+#main_content #sidebar {float: right; width: 234px;}
+
+.pagetitle {border-bottom:1px solid #CCC;}
+
+.entry {margin-bottom: 50px;}
+.entry h2 {margin-bottom: 0; font-size: 22px;}
+.entry h2 a {color: #3E97BB; font-weight: bold; text-decoration: none;}
+.entry h2 a:hover {color: #3C1C0F;}
+.entry .information {font-size: 10px; color: #999;}
+.entry .content {margin: 10px 0; text-align: justify;}
+.single_entry {margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #CCC;}
+.related_posts {margin-bottom: 20px;}
+.sidebar_item {}
+.sidebar_item ul {margin:0;}
+.sidebar_item li {
+	background:transparent url(/images/li.gif) no-repeat scroll 0% 0%;
+	border:0pt none;
+	list-style-type:none;
+	margin:0pt;
+	padding:0pt 0pt 5px 20px;
+}
+.sidebar_item .header {
+	/*background: url(/images/sidebar_header.png) no-repeat top left;*/
+	width: 234px; border-bottom: 1px solid #CCC; padding:0;
+}
+.sidebar_item .header h2 {font-size: 15px; color: #31170D; margin:0 0 5px; padding:0;}
+.sidebar_item .content {margin-top: 10px;}
+#bottom_gfx_banner {background: url(/images/bottom_gx_banner.png) repeat-x top left;}
+#bottom_gfx {background: url(/images/night_gfx.jpg) no-repeat top left; width: 940px; height: 318px;}
+
+#footer {background: url(/images/footer.png) repeat-x top left; height: 88px;}
+#footer_content {color: #FFF; padding: 10px;}
+#footer_content a:hover {color: #FFF;}
+
+.footer_extra_info {float: left; margin-right: 60px; width: 250px;}
+.footer_extra_info h3 {border-bottom: 1px dashed #CCC; margin-bottom: 5px;}
+.footer_extra_info a:hover {color: #F7F7F7;}
+
+#twitter_div ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#twitter_div ul li {
+	font-size: 12px;
+	line-height: 1.3;
+	margin-right: 10px;
+	padding: 7px 0;
+	border-bottom: 1px dashed #CCC;
+}
+
+#lastfm_div ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#lastfm_div ul li {
+	font-size: 12px;
+	line-height: 1.3;
+	margin-right: 10px;
+	padding: 7px 0;
+	border-bottom: 1px dashed #CCC;
+}
+
+#flickr_latest a {margin-right: 25px}
+
+
+.download_embed {margin-bottom: 5px; }
+
+/* == SOCIABLE STUFF === */
+div.sociable { margin: 16px 0; margin-bottom:5px; }
+
+span.sociable_tagline { position: relative; }
+span.sociable_tagline span { display: none; width: 14em; }
+span.sociable_tagline:hover span {
+	position: absolute;
+	display: block;
+	top: -5em;
+	background: #ffe;
+	border: 1px solid #ccc;
+	color: black;
+	line-height: 1.25em;
+}
+.sociable span {
+	display: block;
+}
+.sociable ul {
+	display: inline;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.sociable ul li {
+	background: none;
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 1px;
+}
+.sociable ul li:before { content: ""; }
+.sociable img {
+	float: none;
+	width: 16px;
+	height: 16px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.sociable-hovers {
+	opacity: .4;
+	-moz-opacity: .4;
+	filter: alpha(opacity=40);
+}
+.sociable-hovers:hover {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+/* END OF SOCIABLE */
