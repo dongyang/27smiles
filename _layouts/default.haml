@@ -1,0 +1,45 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", :"xml:lang" => "en"}
+  %head
+    %meta{:"http-equiv" => "Content-type", :content => "text/html; charset=utf-8"}
+    %title
+      - if page.respond_to?(:page)
+        == #{page.title} ::
+      = site.blog_title
+    %link{:rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}
+    %link{:rel => "stylesheet", :href => "/stylesheets/master.css", :type => "text/css"}
+  %body{:id => (page.body_id if page.respond_to?(:body_id))}
+    #header
+      .wrapper
+        #logo <a href="/"><img src="/images/logo.png" alt="Take me home!" /></a>
+        #menu_box
+          %ul#main_menu
+            %li.first.home <a href="/">Home</a>
+            %li <a href="/projects">Projects</a>
+            %li <a href="/work">Work</a>
+            %li <a href="/contact">Contact</a>
+        .clr
+    #info_box
+    #main_content
+      .wrapper
+        #content= content
+        #sidebar Sidebar
+        .clr
+      .clr
+    #bottom_gfx_banner
+      #bottom_gfx.wrapper
+    #footer
+      #footer_content.wrapper
+        #twitter_div.footer_extra_info
+          %h3 Twitter
+          =include 'twitter.html'
+        #lastfm_div.footer_extra_info
+          %h3 Last.fm
+          =include 'lastfm.html'
+        #flickr_div.footer_extra_info
+          %h3 Flickr
+          =include 'flickr.html'
+        .clr
+        %br/
+        #copyright
+          == Copyright &copy; 2007 - 2008 #{site.blog_title}. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.  <br /><a href="/feed.xml">Entries (RSS)</a>.
