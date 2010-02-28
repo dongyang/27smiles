@@ -1,0 +1,10 @@
+---
+layout: default
+title: Archives for %str_month% %year%
+---
+
+%h1== Archive for #{to_month(page.month)}, #{page.year}
+- page.archive_posts.each do |post|
+  .archive_entry
+    %h3== <a href="#{post.url}">#{post.title}</a>
+    .information== #{post.date.strftime("%d %b %Y")}
