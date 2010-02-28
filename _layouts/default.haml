@@ -23,7 +23,20 @@
     #main_content
       .wrapper
         #content= content
-        #sidebar Sidebar
+        #sidebar
+          .sidebar_item
+            .header <h2>Categories</h2>
+            .content
+              %ul
+                - site.categories.each do |cat, posts|
+                  %li== <a href="/category/#{cat.downcase}">#{cat.capitalize}</a>
+          .sidebar_item
+            .header <h2>Archives</h2>
+            .content
+              %ul
+                - site.collated_posts.each do |year, months|
+                  - months.each do |month, days|
+                    %li== <a href="/#{year}/#{to_month_i(month)}">#{to_month(month)} #{year}</a> (#{days_to_post_count(days)})
         .clr
       .clr
     #bottom_gfx_banner
