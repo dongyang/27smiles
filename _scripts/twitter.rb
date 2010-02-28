@@ -1,3 +1,5 @@
+$:.unshift(File.dirname(__FILE__))
+
 require 'rubygems'
 require 'open-uri'
 require 'nokogiri'
