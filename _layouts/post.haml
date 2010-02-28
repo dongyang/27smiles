@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+.entry.single_entry
+ %h2== <a href="#{page.url}" rel="bookmark" title="Permanent Link to #{page.title}">#{page.title}</a>
+ .information== Posted on #{page.date.strftime("%d %b %Y")}
+ .content= content
