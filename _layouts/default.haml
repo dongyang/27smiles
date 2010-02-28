@@ -34,9 +34,9 @@
             .header <h2>Archives</h2>
             .content
               %ul
-                - site.collated_posts.each do |year, months|
-                  - months.each do |month, days|
-                    %li== <a href="/#{year}/#{to_month_i(month)}">#{to_month(month)} #{year}</a> (#{days_to_post_count(days)})
+                - site.collated_posts.to_a.reverse.each do |year|
+                  - year.last.to_a.reverse.each do |month|
+                    %li== <a href="/#{year.first}/#{to_month_i(month.first)}">#{to_month(month.first)} #{year.first}</a> (#{days_to_post_count(month.last)})
         .clr
       .clr
     #bottom_gfx_banner
