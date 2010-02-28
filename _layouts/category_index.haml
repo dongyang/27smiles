@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Archives for %str_month% %year%
+title: Posts categorised as %cat%
 ---
-
-%h1== Archive for #{page.year}
-- page.archive_posts.reverse.each do |post|
+- page.category_posts.reverse.each do |post|
   .slim_entry
     %h3== <a href="#{post.url}">#{post.title}</a>
     .information== #{post.date.strftime("%d %b %Y")}

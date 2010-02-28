@@ -9,6 +9,6 @@ body_id: home
     .content= post.content
 
 - site.older_posts.each do |post|
-  .older_entry
+  .slim_entry
     %h3== <a href="#{post.url}">#{post.title}</a>
     .information== #{post.date.strftime("%d %b %Y")}

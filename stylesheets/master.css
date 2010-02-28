@@ -1,4 +1,4 @@
-/*   
+/*
 Theme Name: Night Watcher
 Theme URI: http://27smiles.com
 Description: Nightish theme for 27smiles.
@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5 {margin-bottom: 10px;}
 	text-align: left;
 }
 .clr{clear: both;}
-			
+
 #header {
 	background: url(/images/header.png) repeat-x top left;
 	height: 103px;
@@ -104,20 +104,20 @@ h1,h2,h3,h4,h5 {margin-bottom: 10px;}
 .pagetitle {border-bottom:1px solid #CCC;}
 
 .entry {margin-bottom: 30px;}
-.older_entry, .archive_entry {
+.slim_entry {
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
-.entry, .older_entry, .archive_entry {
+.entry, .slim_entry {
   border-bottom: 1px dotted #CCC;
 }
-.entry h2 {margin-bottom: 0; font-size: 22px;}
-.older_entry h3, .archive_entry h3 {margin-bottom: 5px; font-size: 16px;}
+.entry h2, .single_entry h2 {margin-bottom: 0; font-size: 22px;}
+.slim_entry h3 {margin-bottom: 5px; font-size: 16px;}
 .entry h2 a {color: #3E97BB; font-weight: bold; text-decoration: none;}
 .entry h2 a:hover {color: #3C1C0F;}
-.entry .information {font-size: 10px; color: #999;}
+.entry .information, .single_entry .information {font-size: 10px; color: #999;}
 .entry .content {margin: 10px 0; text-align: justify;}
-.single_entry {margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #CCC;}
+.single_entry {margin-bottom: 10px; padding-bottom: 10px;}
 .related_posts {margin-bottom: 20px;}
 .sidebar_item {}
 .sidebar_item ul {margin:0;}
