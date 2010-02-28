@@ -54,3 +54,14 @@
         %br/
         #copyright
           == Copyright &copy; 2007 - #{Time.new.year} #{site.blog_title}. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.  <br /><a href="/feed.xml">Entries (RSS)</a>.
+    :javascript
+      (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+          if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+          }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/27smiles/get_num_replies.js' + query + '"></' + 'script>');
+      })();

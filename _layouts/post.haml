@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-
-.entry.single_entry
- %h2== <a href="#{page.url}" rel="bookmark" title="Permanent Link to #{page.title}">#{page.title}</a>
- .information== Posted on #{page.date.strftime("%d %b %Y")}
- .content= content
+.single_entry
+  %h2== <a href="#{page.url}" rel="bookmark" title="Permanent Link to #{page.title}">#{page.title}</a>
+  .information== Posted on #{page.date.strftime("%d %b %Y")}
+  .content= content
+  - unless page.disable_comments?
+    .comments
+      #disqus_thread
+      %script{:type => 'text/javascript', :src => 'http://disqus.com/forums/27smiles/embed.js'}
+      %noscript <a href="http://disqus.com/forums/27smiles/?url=ref">View the discussion thread.</a>
+      %a{:href => 'http://disqus.com', :class => 'dsq-brlink'} blog comments powered by <span class="logo-disqus">Disqus</span>

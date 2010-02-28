@@ -5,10 +5,13 @@ body_id: home
 - site.latest_posts.each do |post|
   .entry
     %h2== <a href="#{post.url}" rel="bookmark" title="Permanent Link to #{post.title}">#{post.title}</a>
-    .information== Posted on #{post.date.strftime("%d %b %Y")}
+    .information== Posted on #{post.date.strftime("%d %b %Y")} | <a href="#{post.url}/#disqus_thread">View comments</a>
     .content= post.content
 
 - site.older_posts.each do |post|
   .slim_entry
     %h3== <a href="#{post.url}">#{post.title}</a>
-    .information== #{post.date.strftime("%d %b %Y")}
+    .information
+      == #{post.date.strftime("%d %b %Y")}
+      - unless post.data.disable_comments?
+        == | <a href="#{post.url}/#disqus_thread">View comments</a>
