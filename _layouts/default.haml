@@ -28,7 +28,7 @@
             .content
               %ul
                 - site.categories.each do |cat, posts|
-                  %li== <a href="/category/#{cat.downcase}">#{cat.capitalize}</a>
+                  %li== <a href="/category/#{cat.downcase.gsub(/[^A-Za-z0-9.\-]/, '-')}">#{cat.capitalize}</a>
           .sidebar_item
             .header <h2>Archives</h2>
             .content
