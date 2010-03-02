@@ -141,7 +141,7 @@ h1,h2,h3,h4,h5 {margin-bottom: 10px;}
 #footer_content {color: #FFF; padding: 10px;}
 #footer_content a:hover {color: #FFF;}
 
-.footer_extra_info {float: left; margin-right: 60px; width: 250px;}
+.footer_extra_info {float: left; margin-right: 60px; width: 250px; overflow: hidden;}
 .footer_extra_info h3 {border-bottom: 1px dashed #CCC; margin-bottom: 5px;}
 .footer_extra_info a:hover {color: #F7F7F7;}
 
