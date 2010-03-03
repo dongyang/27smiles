@@ -35,7 +35,7 @@ I had problems trying to merge in Henrik's changes, lots of conflicts that I was
 
 ### My fork
 
-My fork is on my github account](http://github.com/RichGuk/jekyll) the [source code](http://github.com/RichGuk/27smiles) for this blog is also on there which will have examples of the different features added to Jekyll in the fork.
+[My fork]](http://github.com/RichGuk/jekyll) is on my github account the [source code](http://github.com/RichGuk/27smiles) for this blog is also on there which will have examples of the different features added to Jekyll in the fork.
 
 ### Twitter, Flickr, Last.fm integration
 To integrate the services I wrote some ruby scripts which pull the relevant data down from each service and format it into presentable HTML before saving this to a file for the server which could then be included into the layout.
