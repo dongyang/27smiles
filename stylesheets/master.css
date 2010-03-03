@@ -32,20 +32,9 @@ img.centered {
 	margin-right: auto;
 	}
 
-img.alignright {
-	padding: 4px;
-	margin: 0 0 2px 7px;
-	display: inline;
-	}
-
-img.alignleft {
-	padding: 4px;
-	margin: 0 7px 2px 0;
-	display: inline;
-	}
-
 .alignright {
 	float: right;
+	padding: 5px;
 	}
 
 .alignleft {
@@ -116,7 +105,8 @@ h1,h2,h3,h4,h5 {margin-bottom: 10px;}
 .entry h2 a {color: #3E97BB; font-weight: bold; text-decoration: none;}
 .entry h2 a:hover {color: #3C1C0F;}
 .entry .information, .single_entry .information {font-size: 10px; color: #999;}
-.entry .content {margin: 10px 0; text-align: justify;}
+.entry .content, .single_entry .entry {margin: 10px 0; text-align: justify;}
+.single_entry .comments {margin-top: 15px;}
 .single_entry {margin-bottom: 10px; padding-bottom: 10px;}
 .related_posts {margin-bottom: 20px;}
 .sidebar_item {}

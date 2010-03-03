@@ -4,3 +4,5 @@ _site
 _includes/flickr.html
 _includes/lastfm.html
 _includes/twitter.html
+_gist_cache/*
+!_gist_cache/.gitignore
