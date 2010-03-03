@@ -19,7 +19,7 @@ There were several things I wanted when moving the blog to Jekyll.
 
 For comments I went with [Disqus](http://disqus.com) which uses JavaScript to display comments for each post, this was the simplest solution and a popular one also. For the rest of the implementations I wanted it was time to create a fork!
 
-## The enviable fork
+## The inevitable fork
 
 It doesn't take long before you begin forking Jekyll and filling it with customisations for your situation, in fact this seems to be common practice evident by the number of forks - it is one of the most forked projects on github.
 
