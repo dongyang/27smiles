@@ -1,3 +1,7 @@
 haml: true
+source: source
+destination: _site
+gist_cache: ./cache/gist
+
 permalink: /:year/:month/:day/:title
 blog_title: 27smiles
