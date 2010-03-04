@@ -8,12 +8,22 @@ require 'date_helpers'
 include DateHelpers
 
 # Setup where we're saving the output.
-filename = File.join(File.dirname(__FILE__), '..', '_includes', 'twitter.html')
+filename = File.join(
+  File.dirname(__FILE__), '..', '_includes', 'twitter.html')
+twitter_cache = File.join(
+  File.dirname(__FILE__), '..', '_includes', 'twitter.cache')
+
+cache = Marshal.load(File.open(twitter_cache, 'r')) if
+  File.exists?(twitter_cache)
+
 # Setup http session stuff.
 sess = Patron::Session.new
 sess.timeout = 30
 sess.base_url = 'http://twitter.com'
-sess.headers['If-Modified-Since'] = File.mtime(filename)
+if cache
+  sess.headers['If-Modified-Since'] = cache[:last_modified].utc
+  sess.headers['If-None-Match'] = cache[:etag]
+end
 resp = sess.get '/statuses/user_timeline/14274164.rss'
 
 if resp.status == 200
@@ -42,6 +52,10 @@ if resp.status == 200
     end
     f.puts '</ul>'
   end
-  mtime = Time.httpdate(resp.headers['Last-Modified'])
-  File.utime(mtime, mtime, filename)
+
+  cache = File.open(twitter_cache, 'w+') do |f|
+    Marshal.dump({
+      :last_modified => Time.httpdate(resp.headers['Last-Modified']),
+      :etag => resp.headers['ETag'] }, f)
+  end
 end
