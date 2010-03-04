@@ -14,9 +14,8 @@ sess = Patron::Session.new
 sess.timeout = 30
 sess.base_url = 'http://twitter.com'
 sess.headers['If-Modified-Since'] = File.mtime(filename)
-puts sess.headers.inspect
 resp = sess.get '/statuses/user_timeline/14274164.rss'
-puts resp.headers.inspect
+
 if resp.status == 200
   doc = Nokogiri::XML(resp.body)
 
