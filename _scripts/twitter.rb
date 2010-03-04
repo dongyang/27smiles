@@ -13,8 +13,11 @@ filename = File.join(
 twitter_cache = File.join(
   File.dirname(__FILE__), '..', '_includes', 'twitter.cache')
 
-cache = Marshal.load(File.open(twitter_cache, 'r')) if
-  File.exists?(twitter_cache)
+begin
+  cache = Marshal.load(File.open(twitter_cache, 'r')) if
+    File.exists?(twitter_cache)
+rescue EOFError
+end
 
 # Setup http session stuff.
 sess = Patron::Session.new
