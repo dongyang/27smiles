@@ -3,7 +3,6 @@ _site
 ._*
 source/_includes/flickr.html
 source/_includes/lastfm.html
-source/_includes/twitter.html
-source/_includes/twitter.cache
+source/_includes/twitter.*
 cache/gist/*
 !cache/gist/.gitignore

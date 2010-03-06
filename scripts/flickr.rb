@@ -4,12 +4,13 @@ require 'patron'
 require 'nokogiri'
 
 # Setup where we're saving the output.
-filename = File.join(File.dirname(__FILE__), '..', '_includes', 'flickr.html')
+filename = File.join(
+  File.dirname(__FILE__), '..', 'source', '_includes', 'flickr.html')
 # Setup http session stuff.
 sess = Patron::Session.new
 sess.timeout = 30
 sess.base_url = 'http://api.flickr.com'
-sess.headers['If-Modified-Since'] = File.mtime(filename)
+sess.headers['If-Modified-Since'] = File.mtime(filename) if File.exists?(filename)
 resp = sess.get '/services/feeds/photos_public.gne?id=39828812@N00&tags=27s&lang=en-us&format=rss_200'
 
 if resp.status == 200
