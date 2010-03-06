@@ -1,6 +1,7 @@
 $:.unshift(File.dirname(__FILE__))
 require 'rubygems'
 require 'time'
+require 'yaml'
 require 'patron'
 require 'nokogiri'
 
@@ -9,14 +10,13 @@ include DateHelpers
 
 # Setup where we're saving the output.
 filename = File.join(
-  File.dirname(__FILE__), '..', '_includes', 'twitter.html')
+  File.dirname(__FILE__), '..', 'source', '_includes', 'twitter.html')
 twitter_cache = File.join(
-  File.dirname(__FILE__), '..', '_includes', 'twitter.cache')
+  File.dirname(__FILE__), '..', 'source', '_includes', 'twitter.yml')
 
 begin
-  cache = Marshal.load(File.open(twitter_cache, 'r')) if
-    File.exists?(twitter_cache)
-rescue EOFError
+  cache = YAML::load_file(twitter_cache)
+rescue Errno::ENOENT
 end
 
 # Setup http session stuff.
@@ -56,9 +56,10 @@ if resp.status == 200
     f.puts '</ul>'
   end
 
-  cache = File.open(twitter_cache, 'w+') do |f|
-    Marshal.dump({
-      :last_modified => Time.httpdate(resp.headers['Last-Modified']),
-      :etag => resp.headers['ETag'] }, f)
-  end
+  data = {
+    :last_modified => Time.httpdate(resp.headers['Last-Modified']),
+    :etag => resp.headers['ETag']
+  }
+
+  File.open(twitter_cache, 'w+') { |f| YAML::dump(data, f) }
 end
