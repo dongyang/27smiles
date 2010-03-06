@@ -8,7 +8,7 @@ require 'date_helpers'
 include DateHelpers
 
 # Setup where we're saving the output.
-filename = File.join(File.dirname(__FILE__), '..', '_includes', 'lastfm.html')
+filename = File.join(File.dirname(__FILE__), '..', 'source', '_includes', 'lastfm.html')
 # Setup http session stuff.
 sess = Patron::Session.new
 sess.timeout = 30
