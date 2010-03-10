@@ -14,6 +14,16 @@ filename = File.join(
 twitter_cache = File.join(
   File.dirname(__FILE__), '..', 'source', '_includes', 'twitter.yml')
 
+# Randomise intro message.
+intro = [
+  'I last spoke this profound tweet:',
+  'I was last seen saying:',
+  'God has spoken to me and he told me to say:',
+  'Let it be known that:',
+  'Listen! For I have this to say:'
+].sort_by { rand }.first
+
+
 begin
   cache = YAML::load_file(twitter_cache)
 rescue Errno::ENOENT
@@ -33,7 +43,6 @@ if resp.status == 200
   doc = Nokogiri::XML(resp.body)
 
   File.open(filename, 'w') do |f|
-    f.puts '<ul class="twitter_feed">'
     doc.xpath('.//item').slice(0..5).each do |item|
       desc = item.at_xpath('description').text
       desc = desc.gsub(/(.+): /, '')
@@ -44,16 +53,26 @@ if resp.status == 200
       # Skip items that start with @ don't need those on the site =)
       unless desc =~ /^@/
         # Link up @username
-        desc.gsub!(/(?!\s+)@([A-Za-z0-9_]+)/, '<a class="user" href="http://twitter.com/\1">@\1</a>')
+        desc.gsub!(/(?!\s+)@([A-Za-z0-9_]+)/,
+          '<a class="user" href="http://twitter.com/\1">@\1</a>')
         # Link up hashtags.
         desc.gsub!(/#([A-Za-z0-9_]+)/,
           '<a class="hash" href="http://twitter.com/#search?q=%23\1">#\1</a>')
-       # Finally convert new lines to br's
-       desc.gsub!(/\n/, '<br />')
-        f.puts %Q{\t<li>#{desc} <a href="#{link}">#{time_ago_in_words(Time.parse(date))} ago</a></li>}
+        # Finally convert new lines to br's
+        desc.gsub!(/\n/, '<br />')
+
+        # write stuff to file.
+        f.puts %Q{<p class="intro">#{intro}</p><div class="clear"></div>}
+        f.puts %Q{
+          <p class="tweet">
+            &#8220;<span>#{desc}</span>&#8221;
+          </p>
+        }
+        f.puts %Q{<p><a href="#{link}">view evidence</a></p>}
+        # We only need the first tweet that isn't an @ reply so break out now.
+        break
       end
     end
-    f.puts '</ul>'
   end
 
   data = {
