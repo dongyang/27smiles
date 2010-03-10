@@ -1,5 +1,5 @@
 .DS_Store
-_site
+site
 ._*
 source/_includes/flickr.html
 source/_includes/lastfm.html
