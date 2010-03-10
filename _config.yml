@@ -1,4 +1,6 @@
-haml: true
+haml:
+  format: :html5
+markdown: rdiscount
 source: source
 destination: _site
 gist_cache: ./cache/gist

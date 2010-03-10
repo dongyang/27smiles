@@ -1,17 +1,38 @@
 ---
 layout: default
 body_id: home
+front_page: true
 ---
 - site.latest_posts.each do |post|
-  .entry
-    %h2== <a href="#{post.url}" rel="bookmark" title="Permanent Link to #{post.title}">#{post.title}</a>
-    .information== Posted on #{post.date.strftime("%d %b %Y")} | <a href="#{post.url}/#disqus_thread">View comments</a>
-    .content= post.content
+  .box.big_box
+    .article
+      .grid_7.alpha
+        %h2.title== <a href="#{post.url}">#{post.title}</a>
+      .grid_2.omega
+        .short_date{:title => post.date.strftime('%d %b %Y')}
+          %span.month= post.date.strftime('%b')
+          %span.day= post.date.day
+      .clear
+      .body
+        = post.content
+        .clear
+      .container_9.info
+        - if !post.data.disable_comments?
+          == <a href="#{post.url}#disqus_thread">Comments</a>
+        - if !post.data.disable_comments? && post.extended
+          |
+        - if post.extended
+          == <a href="#{post.url}">Read full post &raquo;</a>
+        - if post.categories
+          .categories= category_list(post.categories)
 
-- site.older_posts.each do |post|
-  .slim_entry
-    %h3== <a href="#{post.url}">#{post.title}</a>
-    .information
-      == #{post.date.strftime("%d %b %Y")}
-      - unless post.data.disable_comments?
-        == | <a href="#{post.url}/#disqus_thread">View comments</a>
+.box.big_box#older_articles
+  - site.older_posts.each do |post|
+    .article
+      .grid_7.alpha
+        %h2.title== <a href="#{post.url}">#{post.title}</a>
+        %span.full_date= post.date.strftime("%d %B %Y")
+      .grid_2.omega
+        .short_date
+          %span.month= post.date.strftime('%b')
+          %span.day= post.date.day

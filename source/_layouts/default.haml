@@ -1,88 +1,91 @@
-!!!strict
-%html{:xmlns => "http://www.w3.org/1999/xhtml", :"xml:lang" => "en"}
+!!!
+%html
   %head
     %meta{:"http-equiv" => "Content-type", :content => "text/html; charset=utf-8"}
-    %title
-      == #{site.blog_title} :: #{page.title? ? page.title : 'Home'}
+    %title== 27smiles: #{page.title? ? page.title : 'Home'}
     %link{:rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}
-    %link{:rel => "stylesheet", :href => "/stylesheets/master.css", :type => "text/css"}
-    %link{:rel => "stylesheet", :href => "http://gist.github.com/stylesheets/gist/embed.css", :type => "text/css"}
-  %body{:id => (page.body_id if page.respond_to?(:body_id))}
+    %link{:rel => "stylesheet", :href => "/stylesheets/960/all.css", :type => "text/css"}
+    %link{:rel => "stylesheet", :href => "/stylesheets/darkness/master.css", :type => "text/css"}
+
+  %body
+
     #header
-      .wrapper
-        #logo <a href="/"><img src="/images/logo.png" alt="Take me home!" /></a>
-        #menu_box
-          %ul#main_menu
-            -# %li.first.home <a href="/">Home</a>
-            -# %li <a href="/projects">Projects</a>
-            -# %li <a href="/work">Work</a>
-            -# %li <a href="/contact">Contact</a>
-        .clr
-    #info_box
-    #main_content
-      .wrapper
-        #content= content
-        #sidebar
-          .sidebar_item
-            .content
-              %form{:action => "http://www.google.com/cse", :id => "cse-search-box"}
-                %div
-                  %input{:name => "cx", :type => "hidden", :value => "003452776527504715988:fpri-ti1_v0"}
-                  %input{:name => "ie", :type => "hidden", :value => "UTF-8"}
-                  %input{:name => "q", :type => "text", :size => "28"}
-                  %input{:name => "sa", :type => "submit", :value => "search"}
-              .rss_feed
-                <a href="http://feeds.feedburner.com/27smiles"><img src="/images/feed.png" alt="" /> Blog Feed</a>
-              %br/
-              %br/
+      .container_12
+        .grid_9#logo
+          %a{:href => "/", :title => "Take me home!"} <img src="/images/darkness/logo.png">
+        .grid_3#search
+          %form{:action => "http://www.google.com/cse", :id => "cse-search-box"}
+            %div
+              %input{:name => "cx", :type => "hidden", :value => "003452776527504715988:fpri-ti1_v0"}
+              %input{:name => "ie", :type => "hidden", :value => "UTF-8"}
+              %input{:name => "q", :id => "q", :type => "text", :size => "28", :placeholder => 'Search'}
+          #feeds
+            %a{:href => "http://feeds.feedburner.com/27smiles"}
+              %img{:src => "/images/darkness/feed.png"}
+              Blog Feed
 
-          .sidebar_item
-            .header <h2>Categories</h2>
-            .content
-              %ul
-                - site.categories.each do |cat, posts|
-                  %li== <a href="/category/#{cat.downcase.gsub(/[^A-Za-z0-9.\-]/, '-')}">#{cat.capitalize}</a>
-          .sidebar_item
-            .header <h2>Archives</h2>
-            .content
-              %ul
-                - site.collated_posts.to_a.reverse.each do |year|
-                  - year.last.to_a.reverse.each do |month|
-                    %li== <a href="/#{year.first}/#{to_month_i(month.first)}">#{to_month(month.first)} #{year.first}</a> (#{days_to_post_count(month.last)})
-        .clr
-      .clr
-    #bottom_gfx_banner
-      #bottom_gfx.wrapper
-    #footer
-      #footer_content.wrapper
-        #twitter_div.footer_extra_info
-          %h3 Twitter
-          =include 'twitter.html'
-        #lastfm_div.footer_extra_info
-          %h3 Last.fm
-          =include 'lastfm.html'
-        #flickr_div.footer_extra_info
-          %h3 Flickr
-          =include 'flickr.html'
-        .clr
-        %br/
-        #copyright
-          == Copyright &copy; 2007 - #{Time.new.year} #{site.blog_title}. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.  <br /><a href="http://feeds.feedburner.com/27smiles">Entries (RSS)</a>.
-    :javascript
-      (function() {
-        var links = document.getElementsByTagName('a');
-        var query = '?';
-        for(var i = 0; i < links.length; i++) {
-          if(links[i].href.indexOf('#disqus_thread') >= 0) {
-            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    #container
+      .container_12#content
+        .grid_9#main= content
+        .grid_3#sidebar
+          .box.list_only#categories
+            %h3 Categories
+            %ul
+              - site.categories.each do |cat, posts|
+                %li== <a href="/category/#{category_slug(cat)}">#{category_capitalize(cat)}</a>
+
+          .box.list_only#archives
+            %h3 Archives
+            %ul
+              - site.collated_posts.to_a.reverse.each do |year|
+                - year.last.to_a.each do |month|
+                  %li== <a href="/#{year.first}/#{to_month_i(month.first)}">#{to_month(month.first)} #{year.first} <span>(#{days_to_post_count(month.last)})</span></a>
+
+          .box#about_me
+            %h3 About Me
+            %img.left{:src => "/images/darkness/simpsons_me.png"}
+            %p Hello! I'm Rich, this is my personal blog. I'm a web developer with a passion for Ruby, Python and HTML/CSS.
+            %p I'm currently based in Birmingham and work for <a href="http://www.names.co.uk/">Namesco</a> as a PHP developer.
+            %p
+              %a{:href => "http://github.com/RichGuk", :title => "my code at Github!"} <img src="/images/darkness/github.png" alt="Github">
+              %a{:href => "http://lastfm.com/user/RichGuk", :title => "my music at Last.fm"} <img src="/images/darkness/lastfm.png" alt="Last.fm">
+              %a{:href => "http://flickr.com/photos/RichGuk", :title => "my photos at Flickr"} <img src="/images/darkness/flickr.png" alt="Flickr">
+              %a{:href => "http://twitter.com/RichGuk", :title => "my random tweets at Twitter"} <img src="/images/darkness/twitter.png" alt="Twitter">
+
+          .box#flickr
+            %h3 Flick<span class="r">r</span>
+            = include 'flickr.html'
+
+          .box#twitter
+            <img src="/images/darkness/twitter_bird.png" class="left pad_right">
+            %h3 Twitter
+            = include 'twitter.html'
+
+    .container_12#footer
+      .grid_12#footer_info==Copyright &copy; 2007 - #{Time.new.year} Richard Grundy. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.
+
+    - if page.post_page?
+      :javascript
+        var disqus_developer = true;
+      %script{:type => 'text/javascript', :src => 'http://disqus.com/forums/27smiles/embed.js'}
+
+    - if page.front_page?
+      :javascript
+        (function() {
+          var links = document.getElementsByTagName('a');
+          var query = '?';
+          for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+              query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
           }
-        }
-        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/27smiles/get_num_replies.js' + query + '"></' + 'script>');
-      })();
+          document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/27smiles/get_num_replies.js' + query + '"></' + 'script>');
+        })();
 
+    :javascript
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-
+    :javascript
       try {
       var pageTracker = _gat._getTracker("UA-2160161-2");
       pageTracker._trackPageview();
