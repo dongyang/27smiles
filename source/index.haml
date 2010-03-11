@@ -18,7 +18,7 @@ front_page: true
         .clear
       .container_9.info
         - if !post.data.disable_comments?
-          == <a href="#{post.url}#disqus_thread">Comments</a>
+          == <a href="#{post.url}/#disqus_thread">Comments</a>
         - if !post.data.disable_comments? && post.extended
           |
         - if post.extended
