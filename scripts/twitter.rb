@@ -43,7 +43,7 @@ if resp.status == 200
   doc = Nokogiri::XML(resp.body)
 
   File.open(filename, 'w') do |f|
-    doc.xpath('.//item').slice(0..5).each do |item|
+    doc.xpath('.//item').each do |item|
       desc = item.at_xpath('description').text
       desc = desc.gsub(/(.+): /, '')
 
