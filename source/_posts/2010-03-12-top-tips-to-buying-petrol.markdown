@@ -13,7 +13,7 @@ If there is one thing that annoys me about having to fill the car up with petrol
 There are a select few (quite a small minority have this level of idiocy) who, 
 instead of waiting maybe a minute or two in a queue for the correct pump. Where the pump is positioned the same side as 
 <img src="/images/posts/2010-03-12-top-tips-to-buying-petrol/busy_petrol_station.jpg" class="right pad" width="300" height="169">
-their fuel cap, they will of course, without a moments hesitation use the pump that is on the **wrong** side for their fuel cap. I meant christ, how stupid! Yes cleaver you! By pushing into another queue and using the pump the other side of the forecourt you have saved yourself minutes of waiting in a queue, genius. Except you're wrong! It's not genus at all it's in fact A grade weak-mindedness and very rude to boot.
+their fuel cap, they will of course, without a moments hesitation use the pump that is on the **wrong** side for their fuel cap. I mean christ, how stupid! Yes clever you! By pushing into another queue and using the pump the other side of the forecourt you have saved yourself minutes of waiting in a queue, genius. Except you're wrong! It's not genius at all it's in fact A grade weak-mindedness and very rude to boot.
 
 === read more ===
 
@@ -34,7 +34,7 @@ A little bit of preparation can go a long way it allows you to be ready for the 
 
 ## Tip number 3: Multitasking
 
-Multitasking is the act of undertaking more than one task at a time. The simple of act can be applied to fuelling your vehicle. For example, while you're waiting for the meter to display the next menu option why don't you start opening your fuel cap? If you're going to be paying by cash then while you're fuelling why don't you get your wallet or purse out and have it ready to hand?
+Multitasking is the act of undertaking more than one task at a time. This simple act can be applied to fuelling your vehicle. For example, while you're waiting for the meter to display the next menu option why don't you start opening your fuel cap? If you're going to be paying by cash then while you're fuelling why don't you get your wallet or purse out and have it ready to hand?
 
 Multitasking allows you to utilise the wasted time normally spent just fuelling and means you're not holding up other motorists afterwards.
 
@@ -42,11 +42,11 @@ Multitasking allows you to utilise the wasted time normally spent just fuelling 
 
 ## Tip number 4: Process of fuelling a.k.a how to use the pump
 
-Using a petrol pump is a very simple task but for the simple people out there this simple task somehow becomes a slow and problematic. I will explain the simple steps needed for efficient fulling.
+Using a petrol pump is a very simple task but for the simple people out there this simple task somehow becomes a slow and problematic. I will explain the simple steps needed for efficient fuelling  .
 
 * Step 1 - select the payment method, if this your first time using the pump the please read the instructions and memorise them. If you  are paying on card just insert your card into the slot (recommended method if not buying other goods), if you're paying by cash then press the button that reads something like "pay at the kiosk".
 * Step 2 - once you have chosen the payment method pick up the fuelling nozzle and insert it into your already opened fuel cap. However, do not press the leaver straight away! Listen for the machine to start and then wait 5 seconds! Only then should you begin.
-* Step 3 - hold the leaver down until you have reached the amount you wish to spend, or until the car is full the pump will stop functioning once it reaches the limit of the tank so please don't try and squeeze those extra few drops out of the pump it's pointless and gains you nothing; who bloody cares if you're under £20 by 3p, donate the change to fucking charity instead of worrying about it.
+* Step 3 - hold the leaver down until you have reached the amount you wish to spend, or until the car is full the pump will stop functioning once it reaches the limit of the tank so please don't try and squeeze those extra few drops out of the pump it's pointless and gains you nothing; who bloody cares if you're under £20 by 3p, donate the change to fucking charity instead of worrying about it.=
 * Step 4 - Lift the nozzle out of the tank and just before it's fully out begin to tilt the end upwards as not to leak fuel down the body of your car! No one wants to wait while you clean your stupid mistake.
 
 
@@ -54,7 +54,7 @@ Using a petrol pump is a very simple task but for the simple people out there th
 <img src="/images/posts/2010-03-12-top-tips-to-buying-petrol/petrol_station.jpg" class="left pad" width="250" height="232">
 This is the step where preparation comes most into play! For now you are prepared, you have correct amount of cash you need and you have your wallet or purse at hand. If you're paying by cash and for fuel only  then you can simply walk straight to the till, leaving your car briefly at the pump - this is acceptable. However, if you plan to buy other goods, or shop around in the garage then please, if provided, use the fucking parking bays and do not leave your car next to the pump. People who leave their car at the pump while they read the magazines should have their license revoked.
 
-On a side note, if your not buying other goods from the station then why don't you just pay on card? Nearly all petrol stations have card pay points; they're secure, faster and you have a electronic record on your statement for the fuel transaction.
+On a side note, if you're not buying other goods from the station then why don't you just pay on card? Nearly all petrol stations have card pay points; they're secure, faster and you have an electronic record on your statement for the fuel transaction.
 
 
 So, that wraps up some top tips I have for the stupid bastards out there who slow the rest of us efficient fuelers down with their simpleton actions. I hope they can learn from these tips and make fuelling a much quicker experience for all of us. 
