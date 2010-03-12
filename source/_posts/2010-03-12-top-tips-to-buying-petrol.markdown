@@ -12,7 +12,7 @@ If there is one thing that annoys me about having to fill the car up with petrol
 
 There are a select few (quite a small minority have this level of idiocy) who, 
 instead of waiting maybe a minute or two in a queue for the correct pump. Where the pump is positioned the same side as 
-<img src="/images/posts/2010-03-10-top-tips-to-buying-petrol/busy_petrol_station.jpg" class="right pad" width="300" height="169">
+<img src="/images/posts/2010-03-12-top-tips-to-buying-petrol/busy_petrol_station.jpg" class="right pad" width="300" height="169">
 their fuel cap, they will of course, without a moments hesitation use the pump that is on the **wrong** side for their fuel cap. I meant christ, how stupid! Yes cleaver you! By pushing into another queue and using the pump the other side of the forecourt you have saved yourself minutes of waiting in a queue, genius. Except you're wrong! It's not genus at all it's in fact A grade weak-mindedness and very rude to boot.
 
 === read more ===
@@ -24,7 +24,7 @@ So please, choose a queue and STICK TO IT.
 
 ## Tip number 2: Prepare yourself for fuelling
 
-<img src="/images/posts/2010-03-10-top-tips-to-buying-petrol/petrol276.jpg" class="left pad" width="238" height="143">
+<img src="/images/posts/2010-03-12-top-tips-to-buying-petrol/petrol276.jpg" class="left pad" width="238" height="143">
 A little bit of preparation can go a long way it allows you to be ready for the situation saving you and others frustration. One classic example of lacking preparation when fuelling is to not prepare the payment method. How many times have you been sat waiting in a queue while some imbecile attempts to find their wallet or purse. For god sake, prepare! If not before you get to the fuel station, then while you're sitting in the queue waiting for the unprepared tosser in front of you. So combined with tip one these are the things you need to prepare for.
 
 * Know your payment method before hand; for cash make sure you have enough.
@@ -51,7 +51,7 @@ Using a petrol pump is a very simple task but for the simple people out there th
 
 
 ## Tip 5: Finishing up a.k.a paying (if cash) and driving away
-<img src="/images/posts/2010-03-10-top-tips-to-buying-petrol/petrol_station.jpg" class="left pad" width="250" height="232">
+<img src="/images/posts/2010-03-12-top-tips-to-buying-petrol/petrol_station.jpg" class="left pad" width="250" height="232">
 This is the step where preparation comes most into play! For now you are prepared, you have correct amount of cash you need and you have your wallet or purse at hand. If you're paying by cash and for fuel only  then you can simply walk straight to the till, leaving your car briefly at the pump - this is acceptable. However, if you plan to buy other goods, or shop around in the garage then please, if provided, use the fucking parking bays and do not leave your car next to the pump. People who leave their car at the pump while they read the magazines should have their license revoked.
 
 On a side note, if your not buying other goods from the station then why don't you just pay on card? Nearly all petrol stations have card pay points; they're secure, faster and you have a electronic record on your statement for the fuel transaction.
