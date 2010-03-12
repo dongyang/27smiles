@@ -296,6 +296,9 @@ img.pad_bottom { margin-bottom: 10px; }
   font-weight: bold;
   font-size: 14px;
 }
+.article .body {
+  margin-top: 15px;
+}
 .article .info {
   -webkit-border-bottom-right-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;
