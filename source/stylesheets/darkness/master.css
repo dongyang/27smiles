@@ -45,7 +45,7 @@ pre, table, address, fieldset {
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: 1.5em;
 }
 p.top_pad { margin-top: 20px; }
@@ -56,19 +56,30 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 h1 { font-size: 2.3em; }
-h2 { font-size: 1.5em; }
+h2 { 
+  font-size: 1.5em;
+  margin: 10px 0 5px 0;
+}
 h3 {
   font-size: 1.2em;
   margin: 10px 0 5px 0;
 }
 
-img.left { float: left; }
-img.right { float: right; }
-img.pad { margin: 10px; }
-img.pad_left { margin-left: 10px; }
-img.pad_right { margin-right: 10px; }
-img.pad_top { margin-top: 10px; }
-img.pad_bottom { margin-bottom: 10px; }
+.left { float: left; }
+.right { float: right; }
+.pad { margin: 10px; }
+.pad_left { margin-left: 10px; }
+.pad_right { margin-right: 10px; }
+.pad_top { margin-top: 10px; }
+.pad_bottom { margin-bottom: 10px; }
+.no_pad_top { padding-top: 0 !important; }
+.no_pad_bottom { padding-top: 0 !important; }
+.no_pad_left { padding-top: 0 !important; }
+.no_pad_right { padding-top: 0 !important; }
+.no_margin_top { margin-top: 0 !important; }
+.no_margin_bottom { margin-top: 0 !important; }
+.no_margin_left { margin-top: 0 !important; }
+.no_margin_right { margin-top: 0 !important; }
 
 /*
  * Layout rules
@@ -322,8 +333,46 @@ img.pad_bottom { margin-bottom: 10px; }
 }
 .article .categories a:hover { color: #FFAF32; }
 
+.article ul li {
+  line-height: 1em;
+}
+
 #comments { padding: 10px; }
 
+.figure {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  zoom: 1;
+}
+  .figure img { display: block; }
+  .figure img.cc {
+    display: inline;
+    line-height: 1.5em;
+    vertical-align: middle;
+  }
+  .figure p {
+    font-weight: normal;
+    font-size: 0.9em;
+    margin: 5px 0 0 0;
+    padding: 0 !important;
+  }
+  
+pre {
+  background: #232323;
+  border-bottom: 1px solid #444545;
+  border-top: 1px solid #444545;
+  font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-style: italic;
+  margin: 0 0 5px 0;
+  padding: 10px;
+  outline: 0px;
+  overflow: auto;
+  overflow-y: hidden;
+  vertical-align: baseline;
+}
 
 /*
  * Github gist's style override.
