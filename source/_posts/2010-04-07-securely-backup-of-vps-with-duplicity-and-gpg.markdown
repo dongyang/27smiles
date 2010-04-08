@@ -37,7 +37,7 @@ Fetch the latest stable release, which as of writing this was 0.6.08b:
 
 <pre>$ mkdir sources<br>$ cd sources<br>$ wget http://code.launchpad.net/duplicity/0.6-series/0.6.08b/+download/duplicity-0.6.08b.tar.gz</pre>
 
-Extra the tarball:
+Extract the tarball:
 
 <pre>$ tar xvzf duplicity-0.6.08b.tar.gz<br>$ cd duplicity-0.6.08b</pre>
 
