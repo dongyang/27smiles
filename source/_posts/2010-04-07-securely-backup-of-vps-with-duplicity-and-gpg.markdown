@@ -69,7 +69,7 @@ Example of the encryption key generation:
 Do exactly the same for the signature key, but make sure you use a different passphrase.
 
 Once both keys have been created you need to export and copy the public encryption and private signature keys to the production box; the safest way to do this is SCP/SSH.
-=
+
 To export the keys run the following commands:
 
 <pre>$ gpg --export -a 'Edge Backup Encryption' > edge.enc.pub.gpg<br>$ gpg --export-secret-keys -a 'Edge Backup Signature' > backup.sig.sec.gpg</pre>
