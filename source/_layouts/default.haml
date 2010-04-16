@@ -37,9 +37,9 @@
           .box.list_only#archives
             %h3 Archives
             %ul
-              - site.collated_posts.to_a.reverse.each do |year|
-                - year.last.to_a.each do |month|
-                  %li== <a href="/#{year.first}/#{to_month_i(month.first)}">#{to_month(month.first)} #{year.first} <span>(#{days_to_post_count(month.last)})</span></a>
+              - site.collated_posts.sort{ |a,b| a[0].to_i <=> b[0].to_i }.reverse.each do |year, months|
+                - months.sort{ |a,b| a[0].to_i <=> b[0].to_i }.reverse.each do |month, days|
+                  %li== <a href="/#{year}/#{to_month_i(month)}">#{to_month(month)} #{year} <span>(#{days_to_post_count(days)})</span></a>
 
           .box#about_me
             %h3 About Me
